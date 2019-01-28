@@ -1,0 +1,204 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7671,        196]
+NotebookOptionsPosition[      7343,        179]
+NotebookOutlinePosition[      7698,        195]
+CellTagsIndexPosition[      7655,        192]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Grid", "[", " ", 
+       RowBox[{"{", "     ", 
+        RowBox[{"(*", 
+         RowBox[{"This", " ", "is", " ", "a", " ", "2", "x1", " ", "grid"}], 
+         " ", "*)"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"Plot", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Sin", "[", 
+               RowBox[{
+                RowBox[{"freq1", " ", "x"}], "+", "t"}], "]"}], ",", 
+              RowBox[{"Sin", "[", 
+               RowBox[{
+                RowBox[{"freq2", " ", "x"}], "-", "t"}], "]"}]}], "}"}], ",", 
+            
+            RowBox[{"{", 
+             RowBox[{"x", ",", 
+              RowBox[{
+               RowBox[{"-", "2"}], " ", "\[Pi]"}], ",", 
+              RowBox[{"2", " ", "\[Pi]"}]}], "}"}], ",", 
+            RowBox[{"PlotRange", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "1.1"}], ",", "1.1"}], "}"}]}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"500", ",", "200"}], "}"}]}], ",", 
+            RowBox[{"AspectRatio", "\[Rule]", 
+             RowBox[{"2", "/", "5"}]}]}], "]"}], "}"}], ",", 
+         RowBox[{"(*", 
+          RowBox[{
+          "This", " ", "is", " ", "the", " ", "plot", " ", "on", " ", "top"}],
+           "*)"}], "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"Plot", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Sin", "[", 
+              RowBox[{
+               RowBox[{"freq2", " ", "x"}], "-", "t"}], "]"}], "+", 
+             RowBox[{"Sin", "[", 
+              RowBox[{
+               RowBox[{"freq1", " ", "x"}], "+", "t"}], "]"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", 
+              RowBox[{
+               RowBox[{"-", "2"}], " ", "\[Pi]"}], ",", 
+              RowBox[{"2", " ", "\[Pi]"}]}], "}"}], ",", 
+            RowBox[{"PlotRange", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "2"}], ",", "2"}], "}"}]}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"500", ",", "200"}], "}"}]}], ",", 
+            RowBox[{"AspectRatio", "\[Rule]", 
+             RowBox[{"2", "/", "5"}]}]}], "]"}], "}"}]}], " ", 
+        RowBox[{"(*", " ", 
+         RowBox[{"This", " ", "is", " ", "the", " ", "bottom", " ", "plot"}], 
+         " ", "*)"}], "\[IndentingNewLine]", "}"}], "]"}], 
+      StyleBox[
+       RowBox[{"(*", " ", ",", " ", "*)"}],
+       Background->RGBColor[1, 1, 0]], " ", 
+      StyleBox[
+       RowBox[{"(*", " ", 
+        RowBox[{"COMMA", " ", "MISSING", " ", "HERE"}], "*)"}],
+       Background->RGBColor[1, 1, 0]], "\[IndentingNewLine]", "\"\<X1\>\""}], 
+     "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"freq1", ",", "1", ",", "\"\<frequency of wave 1\>\""}], 
+        "}"}], ",", "1", ",", "10"}], "}"}]}], ",", 
+    RowBox[{"\"\<X2\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"freq2", ",", "1", ",", "\"\<frequency of wave 2\>\""}], 
+        "}"}], ",", "1", ",", "10"}], "}"}]}], ",", 
+    RowBox[{"\"\<Y1Cyclic\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"t", ",", "1", ",", "\"\<time\>\""}], "}"}], ",", "0", ",", 
+       RowBox[{"2", " ", "\[Pi]"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6467333986109767`*^9, 3.6467334456206656`*^9}, {
+  3.649070607627577*^9, 3.649070609963347*^9}, {3.7153575576507387`*^9, 
+  3.715357585798481*^9}, {3.715357654112125*^9, 3.715357693463028*^9}, {
+  3.715357884351474*^9, 3.7153578870223427`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`freq1$$ = 5.5, $CellContext`freq2$$ = 
+    6.71, $CellContext`t$$ = 3.3175218421908217`, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`freq1$$], 1, "frequency of wave 1"}, 1, 10}, {{
+       Hold[$CellContext`freq2$$], 1, "frequency of wave 2"}, 1, 10}, {{
+       Hold[$CellContext`t$$], 1, "time"}, 0, 2 Pi}}, Typeset`size$$ = {
+    500., {199.634033203125, 205.365966796875}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`freq1$5072$$ = 0, $CellContext`freq2$5073$$ = 
+    0, $CellContext`t$5074$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`freq1$$ = 1, $CellContext`freq2$$ = 
+        1, $CellContext`t$$ = 1}, "ControllerVariables" :> {
+        Hold[$CellContext`freq1$$, $CellContext`freq1$5072$$, 0], 
+        Hold[$CellContext`freq2$$, $CellContext`freq2$5073$$, 0], 
+        Hold[$CellContext`t$$, $CellContext`t$5074$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Grid[{{
+          Plot[{
+            Sin[$CellContext`freq1$$ $CellContext`x + $CellContext`t$$], 
+            
+            Sin[$CellContext`freq2$$ $CellContext`x - $CellContext`t$$]}, \
+{$CellContext`x, (-2) Pi, 2 Pi}, PlotRange -> {-1.1, 1.1}, 
+           ImageSize -> {500, 200}, AspectRatio -> 2/5]}, {
+          Plot[
+          Sin[$CellContext`freq2$$ $CellContext`x - $CellContext`t$$] + 
+           Sin[$CellContext`freq1$$ $CellContext`x + $CellContext`t$$], \
+{$CellContext`x, (-2) Pi, 2 Pi}, PlotRange -> {-2, 2}, 
+           ImageSize -> {500, 200}, AspectRatio -> 2/5]}}], 
+      "Specifications" :> {
+       "X1" -> {{$CellContext`freq1$$, 1, "frequency of wave 1"}, 1, 10}, 
+        "X2" -> {{$CellContext`freq2$$, 1, "frequency of wave 2"}, 1, 10}, 
+        "Y1Cyclic" -> {{$CellContext`t$$, 1, "time"}, 0, 2 Pi}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{545., {273., 278.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.715357595659017*^9, 3.715357655511835*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 848},
+WindowMargins->{{Automatic, -14}, {Automatic, 0}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 11, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3888, 98, 199, "Input"],
+Cell[4471, 122, 2856, 54, 568, "Output"]
+}, Open  ]]
+}
+]
+*)
+

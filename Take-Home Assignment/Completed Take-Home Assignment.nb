@@ -1,0 +1,456 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19552,        448]
+NotebookOptionsPosition[     18372,        420]
+NotebookOutlinePosition[     18731,        436]
+CellTagsIndexPosition[     18688,        433]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Mathematica", " ", "has", " ", "trouble", " ", "interpreting", " ", 
+    "colors", " ", "when", " ", "two", " ", "3", "D", " ", "structures", " ", 
+    "are", " ", "layered", " ", "on", " ", "top", " ", "of", " ", "each", " ", 
+    RowBox[{"other", ".", " ", "There"}], " ", "are", " ", "two", " ", "ways",
+     " ", "of", " ", "avoiding", " ", 
+    RowBox[{"this", ":", " ", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+      "1.", " ", "design", " ", "the", " ", "program", " ", "so", " ", "the", 
+       " ", "two", " ", "structures", " ", "are", " ", "never", " ", "in", 
+       " ", "the", " ", "same", " ", "place", " ", "or", " ", 
+       "\[IndentingNewLine]", "2.", " ", "set", " ", "one", " ", "of", " ", 
+       "the", " ", "structures", " ", "to", " ", "be", " ", "slightly", " ", 
+       RowBox[{"smaller", "/", "larger"}], " ", "than", " ", "the", " ", 
+       RowBox[{"other", ".", " ", "\[IndentingNewLine]", "Examples"}], " ", 
+       "of", " ", "both", " ", "are", " ", "shown", " ", "below", " ", "for", 
+       " ", "the", " ", "take"}], "-", 
+      RowBox[{"home", " ", "assignment"}]}]}]}], " ", "*)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Option", " ", "1"}], ":", " ", 
+    RowBox[{
+    "Set", " ", "the", " ", "cylinder", " ", "of", " ", "liquid", " ", "to", 
+     " ", "have", " ", "an", " ", "upper", " ", "height", " ", "of", " ", 
+     "\"\<height of water\>\"", " ", "and", " ", "the", " ", "cylinder", " ", 
+     "of", " ", "the", " ", "beaker", " ", "to", " ", "have", " ", "a", " ", 
+     "lower", " ", "height", " ", "of", " ", "\"\<height of water\>\""}]}], 
+   "  ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{"LightGray", ",", " ", "\[IndentingNewLine]", 
+        RowBox[{"EdgeForm", "[", "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Opacity", "[", "0.1", "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Cylinder", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "height"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "6"}], "}"}]}], "}"}], ",", "2"}], 
+         "]"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", "Blue", 
+        ",", "\[IndentingNewLine]", 
+        RowBox[{"Opacity", "[", "concentration", "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Cylinder", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "height"}], "}"}]}], "}"}], ",", 
+          "2"}], "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Boxed", "\[Rule]", "False"}]}], "]"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"Control", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "concentration", ",", " ", "0.5", ",", "\"\<concentration\>\""}], 
+        "}"}], ",", "0.2", ",", "1", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], "]"}], 
+    ",", "\[IndentingNewLine]", 
+    RowBox[{"Control", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"height", ",", " ", "3", ",", "\"\<height of water\>\""}], 
+        "}"}], ",", "2", ",", "5", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], "]"}]}],
+    "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.725652430771532*^9, 3.725652725763488*^9}, {
+  3.725652757529943*^9, 3.7256527842400208`*^9}, {3.7256531014092627`*^9, 
+  3.725653166326417*^9}, {3.725653490235353*^9, 
+  3.725653622510803*^9}},ExpressionUUID->"42e94d07-0b0f-4a65-a80b-\
+c1257411d931"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`concentration$$ = 
+    0.587, $CellContext`height$$ = 2.615, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`concentration$$], 0.5, "concentration"}, 0.2, 1}, {{
+       Hold[$CellContext`height$$], 3, "height of water"}, 2, 5}}, 
+    Typeset`size$$ = {320., {214., 218.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`concentration$5871$$ = 0, $CellContext`height$5872$$ = 
+    0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`concentration$$ = 
+        0.5, $CellContext`height$$ = 3}, "ControllerVariables" :> {
+        Hold[$CellContext`concentration$$, $CellContext`concentration$5871$$, 
+         0], 
+        Hold[$CellContext`height$$, $CellContext`height$5872$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics3D[{LightGray, 
+         EdgeForm[], 
+         Opacity[0.1], 
+         Cylinder[{{0, 0, $CellContext`height$$}, {0, 0, 6}}, 2], Blue, 
+         Opacity[$CellContext`concentration$$], 
+         Cylinder[{{0, 0, 0}, {0, 0, $CellContext`height$$}}, 2]}, Boxed -> 
+        False], "Specifications" :> {{{$CellContext`concentration$$, 0.5, 
+          "concentration"}, 0.2, 1, Appearance -> 
+         "Labeled"}, {{$CellContext`height$$, 3, "height of water"}, 2, 5, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{365., {273., 279.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.725652610649963*^9, 3.725652646461185*^9}, {
+  3.725652679088749*^9, 3.725652727568709*^9}, {3.72565275985625*^9, 
+  3.725652785068295*^9}},ExpressionUUID->"04ed1ca8-5d30-4592-9e40-\
+c14db125c007"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Option", " ", "2"}], ":", " ", 
+    RowBox[{
+    "Set", " ", "the", " ", "cylinder", " ", "of", " ", "the", " ", "beaker", 
+     " ", "to", " ", "have", " ", "a", " ", "slightly", " ", "larger", " ", 
+     "radius", " ", "and", " ", "lower", " ", "height", " ", "limit", " ", 
+     "than", " ", "the", " ", "cylinder", " ", "of", " ", "water", " ", "to", 
+     " ", "avoid", " ", "the", " ", "color", " ", "layering", " ", "problem", 
+     " ", "in", " ", "Mathematica"}]}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.725653172031816*^9, 3.725653213043421*^9}, {
+   3.725653278459303*^9, 3.7256532938582773`*^9}, 3.725653487526548*^9, {
+   3.725653658005781*^9, 
+   3.725653658657806*^9}},ExpressionUUID->"083cb7eb-92f4-4389-896f-\
+f48e0defc469"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Graphics3D", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{"LightGray", ",", " ", "\[IndentingNewLine]", 
+       RowBox[{"EdgeForm", "[", "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Opacity", "[", "0.1", "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Cylinder", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "6"}], "}"}]}], "}"}], ",", "2.01"}], 
+        "]"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", "Blue", ",",
+        "\[IndentingNewLine]", 
+       RowBox[{"EdgeForm", "[", "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Opacity", "[", "concentration", "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Cylinder", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "0.01"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "height"}], "}"}]}], "}"}], ",", 
+         "2"}], "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Boxed", "\[Rule]", "False"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Control", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "concentration", ",", " ", "0.5", ",", "\"\<concentration\>\""}], 
+       "}"}], ",", "0.2", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"Control", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"height", ",", " ", "3", ",", "\"\<height of water\>\""}], 
+       "}"}], ",", "2", ",", "5", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], "]"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.7256528138574*^9, 3.725652827346759*^9}, {
+  3.725652923000698*^9, 
+  3.725653062228767*^9}},ExpressionUUID->"3289aacf-6857-41f9-99da-\
+a2e295ab7702"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`concentration$$ = 
+    0.529, $CellContext`height$$ = 3.16, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`concentration$$], 0.5, "concentration"}, 0.2, 1}, {{
+       Hold[$CellContext`height$$], 3, "height of water"}, 2, 5}}, 
+    Typeset`size$$ = {321., {214., 218.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`concentration$8298$$ = 0, $CellContext`height$8299$$ = 
+    0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`concentration$$ = 
+        0.5, $CellContext`height$$ = 3}, "ControllerVariables" :> {
+        Hold[$CellContext`concentration$$, $CellContext`concentration$8298$$, 
+         0], 
+        Hold[$CellContext`height$$, $CellContext`height$8299$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics3D[{LightGray, 
+         EdgeForm[], 
+         Opacity[0.1], 
+         Cylinder[{{0, 0, 0}, {0, 0, 6}}, 2.01], Blue, 
+         EdgeForm[], 
+         Opacity[$CellContext`concentration$$], 
+         Cylinder[{{0, 0, 0.01}, {0, 0, $CellContext`height$$}}, 2]}, Boxed -> 
+        False], "Specifications" :> {{{$CellContext`concentration$$, 0.5, 
+          "concentration"}, 0.2, 1, Appearance -> 
+         "Labeled"}, {{$CellContext`height$$, 3, "height of water"}, 2, 5, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{366., {273., 279.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.725652827859333*^9, 3.725652928048707*^9, {3.725652987932612*^9, 
+   3.725653063560357*^9}},ExpressionUUID->"f24f3995-7322-45af-b3b9-\
+a406edaa8f37"]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.725653683083205*^9},ExpressionUUID->"d1c3104f-71fc-46e5-97fd-\
+e669b2a55cf7"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+  "Here", " ", "is", " ", "an", " ", "example", " ", "with", " ", "the", " ", 
+   "cylinder", " ", "of", " ", "the", " ", "beaker", " ", "having", " ", 
+   "the", " ", "same", " ", "radius", " ", "and", " ", "lower", " ", "limit", 
+   " ", "as", " ", "the", " ", "cylinder", " ", "of", " ", "water", " ", "to",
+    " ", "show", " ", "the", " ", "affect", " ", "on", " ", "the", " ", 
+   "color", " ", "when", " ", "two", " ", "3", "D", " ", "images", " ", "are",
+    " ", "layered", " ", "in", " ", "Mathematica"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.725653218580765*^9, 3.725653268579749*^9}, {
+  3.7256533389780407`*^9, 3.7256533739424343`*^9}, {3.725653694243108*^9, 
+  3.72565370444825*^9}},ExpressionUUID->"a94c1801-8dc7-4849-8c5d-\
+88a088e30820"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Graphics3D", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{"LightGray", ",", " ", "\[IndentingNewLine]", 
+       RowBox[{"EdgeForm", "[", "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Opacity", "[", "0.1", "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Cylinder", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "6"}], "}"}]}], "}"}], ",", "2"}], 
+        "]"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", "Blue", ",",
+        "\[IndentingNewLine]", 
+       RowBox[{"EdgeForm", "[", "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Opacity", "[", "concentration", "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Cylinder", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "height"}], "}"}]}], "}"}], ",", 
+         "2"}], "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Boxed", "\[Rule]", "False"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Control", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "concentration", ",", " ", "0.5", ",", "\"\<concentration\>\""}], 
+       "}"}], ",", "0.2", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"Control", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"height", ",", " ", "3", ",", "\"\<height of water\>\""}], 
+       "}"}], ",", "2", ",", "5", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], "]"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.725653304244534*^9, 
+  3.725653306794756*^9}},ExpressionUUID->"a2a0ef6e-f6af-490e-9a39-\
+133871734552"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`concentration$$ = 
+    0.6060000000000001, $CellContext`height$$ = 3.41, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`concentration$$], 0.5, "concentration"}, 0.2, 1}, {{
+       Hold[$CellContext`height$$], 3, "height of water"}, 2, 5}}, 
+    Typeset`size$$ = {320., {214., 218.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`concentration$8839$$ = 0, $CellContext`height$8840$$ = 
+    0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`concentration$$ = 
+        0.5, $CellContext`height$$ = 3}, "ControllerVariables" :> {
+        Hold[$CellContext`concentration$$, $CellContext`concentration$8839$$, 
+         0], 
+        Hold[$CellContext`height$$, $CellContext`height$8840$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics3D[{LightGray, 
+         EdgeForm[], 
+         Opacity[0.1], 
+         Cylinder[{{0, 0, 0}, {0, 0, 6}}, 2], Blue, 
+         EdgeForm[], 
+         Opacity[$CellContext`concentration$$], 
+         Cylinder[{{0, 0, 0}, {0, 0, $CellContext`height$$}}, 2]}, Boxed -> 
+        False], "Specifications" :> {{{$CellContext`concentration$$, 0.5, 
+          "concentration"}, 0.2, 1, Appearance -> 
+         "Labeled"}, {{$CellContext`height$$, 3, "height of water"}, 2, 5, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{365., {273., 279.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.725653307395409*^9},ExpressionUUID->"ffbf1ae6-00e1-4728-92c4-\
+fa678294d9e0"]
+}, Open  ]]
+},
+WindowSize->{808, 688},
+WindowMargins->{{Automatic, 113}, {Automatic, 0}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4086, 86, 577, "Input",ExpressionUUID->"42e94d07-0b0f-4a65-a80b-c1257411d931"],
+Cell[4669, 110, 2513, 49, 571, "Output",ExpressionUUID->"04ed1ca8-5d30-4592-9e40-c14db125c007"]
+}, Open  ]],
+Cell[7197, 162, 844, 16, 94, "Input",ExpressionUUID->"083cb7eb-92f4-4389-896f-f48e0defc469"],
+Cell[CellGroupData[{
+Cell[8066, 182, 2228, 54, 388, "Input",ExpressionUUID->"3289aacf-6857-41f9-99da-a2e295ab7702"],
+Cell[10297, 238, 2474, 50, 571, "Output",ExpressionUUID->"f24f3995-7322-45af-b3b9-a406edaa8f37"]
+}, Open  ]],
+Cell[12786, 291, 147, 3, 52, "Input",ExpressionUUID->"d1c3104f-71fc-46e5-97fd-e669b2a55cf7"],
+Cell[12936, 296, 808, 13, 73, "Input",ExpressionUUID->"a94c1801-8dc7-4849-8c5d-88a088e30820"],
+Cell[CellGroupData[{
+Cell[13769, 313, 2175, 53, 388, "Input",ExpressionUUID->"a2a0ef6e-f6af-490e-9a39-133871734552"],
+Cell[15947, 368, 2409, 49, 571, "Output",ExpressionUUID->"ffbf1ae6-00e1-4728-92c4-fa678294d9e0"]
+}, Open  ]]
+}
+]
+*)
+
